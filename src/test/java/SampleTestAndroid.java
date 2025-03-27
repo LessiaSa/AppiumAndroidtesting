@@ -38,7 +38,8 @@ public class SampleTestAndroid {
         if (platform == Platform.Android) {
             desiredCapabilities.setCapability("platformName", "Android");
             desiredCapabilities.setCapability("appium:deviceName", "Some name");
-            desiredCapabilities.setCapability("appium:app", "C:\\Users\\user\\HomeworkAndroid1\\app\\build\\outputs\\apk\\debug\\app-debug.apk");
+            desiredCapabilities.setCapability("appium:appPackage", "ru.netology.testing.uiautomator");
+            desiredCapabilities.setCapability("appium:appActivity", "ru.netology.testing.uiautomator.MainActivity");
             desiredCapabilities.setCapability("appium:automationName", "uiautomator2");
             driver = new AndroidDriver(getUrl(), desiredCapabilities);
             mobileObjects = new MobileObjects(driver);
